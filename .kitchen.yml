@@ -17,6 +17,20 @@ platforms:
   - name: centos-7.3
 
 suites:
-  - name: default
+  - name: create-core
     run_list:
-      - recipe[pacifica_docker_test::default]
+      - recipe[pacifica_docker_test::core_create]
+      - recipe[pacifica_docker_test::rabbit-deploy]
+
+  - name: create-uploader
+    run_list:
+      - recipe[pacifica_docker_test::uploader_create]
+      - recipe[pacifica_docker_test::rabbit-deploy]
+
+  - name: remove-core
+    run_list:
+      - recipe[pacifica_docker_test::core_remove]
+
+  - name: remove-uploader
+    run_list:
+      - recipe[pacifica_docker_test::uploader_remove]

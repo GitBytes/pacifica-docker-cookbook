@@ -1,1 +1,0 @@
-# pacifica-docker helper definitions

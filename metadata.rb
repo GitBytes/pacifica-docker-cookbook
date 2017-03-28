@@ -12,4 +12,5 @@ if respond_to?(:source_url)
 end
 version '0.0.1'
 
+depends 'chef-sugar'
 depends 'docker'
